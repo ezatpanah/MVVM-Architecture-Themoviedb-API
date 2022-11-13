@@ -22,4 +22,4 @@ Technologies and Libraries Used :
 
 Screen-Shot :
 <br>
-<img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031198.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031207.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031217.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031224.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031231.png" width="20%">
+<img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031198.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031207.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031217.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1667031224.png" width="20%"><img alt="Ezatpanah Themoviedb-API" src="screenshot/Screenshot_1668336488.png" width="20%">
