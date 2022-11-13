@@ -14,5 +14,6 @@ class ApiRepository @Inject constructor(
     suspend fun getPopularMoviesList(page: Int) = apiServices.getPopularMoviesList(page)
     suspend fun getSearchMoviesList(page: Int,query: String) = apiServices.getSearchMoviesList(page,query)
     suspend fun getMovieDetails(id: Int) = apiServices.getMovieDetails(id)
+    suspend fun getMovieCredits(id: Int) = apiServices.getMovieCredits(id)
 
 }

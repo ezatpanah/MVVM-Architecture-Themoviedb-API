@@ -143,12 +143,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/summaryLay"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/infoLay"
-                tools:layout_editor_absoluteX="10dp">
+                app:layout_constraintTop_toBottomOf="@id/infoLay">
 
                 <TextView
                     android:id="@+id/movieSummaryTitle"
@@ -176,6 +174,37 @@
                     app:layout_constraintTop_toBottomOf="@id/movieSummaryTitle" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actorsLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/summaryLay">
+                <!--Title-->
+                <TextView
+                    android:id="@+id/movieActorsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/actors"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_round_person_24"
+                    app:drawableTint="@color/philippineSilver"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--Images-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imagesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/actorsLay"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

@@ -10,11 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.ezatpanah.themoviedb.R
+import com.ezatpanah.themoviedb.adapter.ImagesAdapter
 import com.ezatpanah.themoviedb.databinding.FragmentDetailBinding
 import com.ezatpanah.themoviedb.db.MoviesEntity
 import com.ezatpanah.themoviedb.utils.Constants
+import com.ezatpanah.themoviedb.utils.initRecycler
 import com.ezatpanah.themoviedb.utils.showInvisible
 import com.ezatpanah.themoviedb.viewmodel.DetailsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,11 +35,15 @@ class DetailFragment : Fragment() {
     @Inject
     lateinit var entity: MoviesEntity
 
+    @Inject
+    lateinit var imagesAdapter: ImagesAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         movieId = args.movieId
         if (movieId > 0) {
             detailsViewModel.loadDetailsMovie(movieId)
+            detailsViewModel.loadCreditsMovie(movieId)
         }
     }
 
@@ -75,6 +82,17 @@ class DetailFragment : Fragment() {
                 }
 
             }
+
+
+            detailsViewModel.creditsMovie.observe(viewLifecycleOwner){ response ->
+                imagesAdapter.differ.submitList(response.cast)
+                imagesRecyclerView.initRecycler(
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false), imagesAdapter
+                )
+
+            }
+
+
             detailsViewModel.loading.observe(viewLifecycleOwner) {
                 if (it) {
                     detailLoading.showInvisible(true)

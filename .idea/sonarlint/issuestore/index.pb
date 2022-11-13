@@ -33,15 +33,7 @@ c
 3app/src/main/java/com/ezatpanah/themoviedb/MyApp.kt,0\7\07c0fa170a206d62726f865231ae218a1ffbb23a
 v
 Fapp/src/main/java/com/ezatpanah/themoviedb/ui/search/SearchFragment.kt,7\d\7dfc71f4e42d9c8ea916125c97403f32b2d75fef
-{
-Kapp/src/main/java/com/ezatpanah/themoviedb/adapter/UpcomingMoviesAdapter.kt,7\b\7b68beba2f64f3d049fd64e2f4facb0f9d28422b
 Å
 Qapp/src/main/java/com/ezatpanah/themoviedb/response/UpcomingMoviesListResponse.kt,1\b\1b9dc112293fb35cb1942c7fd5bd9548070f4fd5
-v
-Fapp/src/main/java/com/ezatpanah/themoviedb/ui/detail/DetailFragment.kt,9\2\925f2e11ea0df4f05c4dd4c534c718e92dcc2578
-x
-Happ/src/main/java/com/ezatpanah/themoviedb/viewmodel/DetailsViewModel.kt,2\6\26403fd51f5e1adee88205617cdffd38535f7c2f
-m
-=app/src/main/java/com/ezatpanah/themoviedb/utils/Constants.kt,5\e\5eb48039d633f0358d7ec1bd0598ccfc5e3941dd
 
 Oapp/src/main/java/com/ezatpanah/themoviedb/response/CommonMoviesListResponse.kt,7\3\73bee19dc8f324a5a257317f7be85b464c5e8b0a

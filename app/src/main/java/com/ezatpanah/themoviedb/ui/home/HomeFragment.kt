@@ -68,7 +68,6 @@ class HomeFragment : Fragment() {
             // Genre List
             apiViewModel.genreList.observe(viewLifecycleOwner) {
                 genreMoviesAdapter.differ.submitList(it.genres)
-
                 genresRecycler.initRecycler(
                     LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false), genreMoviesAdapter
                 )

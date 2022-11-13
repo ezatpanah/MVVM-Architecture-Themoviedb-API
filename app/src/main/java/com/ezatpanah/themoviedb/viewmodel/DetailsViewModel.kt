@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.ezatpanah.themoviedb.db.MoviesEntity
 import com.ezatpanah.themoviedb.repository.ApiRepository
 import com.ezatpanah.themoviedb.repository.DatabaseRepository
+import com.ezatpanah.themoviedb.response.CreditsLisResponse
 import com.ezatpanah.themoviedb.response.DetailsMovieResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -28,6 +29,16 @@ constructor(
         val response = apiRepository.getMovieDetails(id)
         if (response.isSuccessful) {
             detailsMovie.postValue(response.body())
+        }
+        loading.postValue(false)
+    }
+
+    val creditsMovie = MutableLiveData<CreditsLisResponse>()
+    fun loadCreditsMovie(id: Int) = viewModelScope.launch {
+        loading.postValue(true)
+        val response = apiRepository.getMovieCredits(id)
+        if (response.isSuccessful) {
+            creditsMovie.postValue(response.body())
         }
         loading.postValue(false)
     }
