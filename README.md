@@ -1,4 +1,4 @@
-# Themoviedb-API
+# Themoviedb-API-MVVM
 
 Overview :
 
