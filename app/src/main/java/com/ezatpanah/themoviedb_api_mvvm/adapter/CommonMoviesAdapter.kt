@@ -31,13 +31,13 @@ class CommonMoviesAdapter @Inject constructor() : RecyclerView.Adapter<CommonMov
     inner class ViewHolder() : RecyclerView.ViewHolder(binding.root) {
         fun setData(item: CommonMoviesListResponse.Result) {
             binding.apply {
-                movieNameTxt.text = item.title
-                movieRateTxt.text = item.voteAverage.toString()
-                movieYearTxt.text = item.releaseDate
-                movieCountryTxt.text = item.originalLanguage
+                tvMovieName.text = item.title
+                tvRate.text = item.voteAverage.toString()
+                tvMovieDateRelease.text = item.releaseDate
+                tvLang.text = item.originalLanguage
 
                 val moviePosterURL = POSTER_BASE_URL + item?.posterPath
-                moviePosterImg.load(moviePosterURL) {
+                imgMovie.load(moviePosterURL) {
                     crossfade(true)
                     crossfade(800)
                     scale(Scale.FIT)

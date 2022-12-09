@@ -31,13 +31,13 @@ class FavoriteMoviesAdapter @Inject constructor() : RecyclerView.Adapter<Favorit
     inner class ViewHolder() : RecyclerView.ViewHolder(binding.root) {
         fun setData(item: MoviesEntity) {
             binding.apply {
-                movieNameTxt.text = item.title
-                movieRateTxt.text = item.rate
-                movieYearTxt.text = item.year
-                movieCountryTxt.text = item.lang
+                tvMovieName.text = item.title
+                tvRate.text = item.rate
+                tvMovieDateRelease.text = item.year
+                tvLang.text = item.lang
 
                 val moviePosterURL = POSTER_BASE_URL + item.poster
-                moviePosterImg.load(moviePosterURL) {
+                imgMovie.load(moviePosterURL) {
                     crossfade(true)
                     crossfade(800)
                     scale(Scale.FIT)
